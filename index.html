@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Objeto de Aprendizagem</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		<link type="text/css" rel="stylesheet" href="css/smoothness/jquery-ui-1.8.13.custom.css"/>
+		<link type="text/css" href="css/sidebar.css" rel="stylesheet" />
+		<link type="text/css" href="css/ai.css" rel="stylesheet"/>
+
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-swfobject.min.js"></script>
+		<script type="text/javascript" src="js/scorm_wrapper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+		<script type="text/javascript" src="js/ai.js"></script>
+		<script type="text/javascript" src="js/frame_transition.js"></script>
+		<script type="text/javascript" src="js/hooks.js"></script>
+		<script type="text/javascript" src="js/dialog_custom.js"></script>
+		<script type="text/javascript" src="js/jquery.dialogextend.js"></script>
+	</head>
+	
+	<body>
+		<div id="slidebottom" class="slide">
+			<div class="borda fechada"></div>
+			<div class="inner">
+				<div id="ai-container">
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Obtenha o Adobe Flash player" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="content">
+    
+			<h1>Derivadas parciais <span class="completion-message start-invisible">(atividade concluída)</span></h1>
+
+			<noscript>
+				<p id="noscript-message">
+					Esta atividade interativa precisa da sua <a href="http://midia.atp.usp.br/atividades-interativas/shared/html/enabling_js/">permissão</a> para executar código Javascript.
+				</p>
+			</noscript>
+			
+			<div>
+				<span class="init-message start-invisible">
+					Configurando a atividade. Por favor, aguarde...
+				</span>
+				<span id="init-failure-message">
+					Não foi possível configurar a atividade. Informe o <span class="foreign">Help desk</span> sobre isso.
+				</span>
+			</div>
+			
+			<div id="frame-0" class="frame start-invisible">
+				<p>
+					<span id="learner-prename">Caro(a) aluno(a),</span> antes de executar esta atividade online estude o tópico “Derivadas parciais”, no texto de referência, e execute a "Atividade exploratória sobre gráficos, forma implícita, limites e continuidade". Ao longo desta atividade, utilize o fórum deste tópico para discutir com seus colegas e tutores suas conclusões e dificuldades, e mesmo para auxiliar seus colegas.
+				</p>
+			</div>
+			
+			<div id="frame-1" class="frame start-invisible">
+				<p>
+					A figura ao lado apresenta o gráfico da função <img src="images/img27.png" alt="Função de x e y"/> através de suas curvas de nível, ou seja, como se o estivessemos vendo de cima. 
+					Interpretaremos esta função como a área de um retângulo de lados x e y (dados em metros, por exemplo). O principal objetivo desta atividade <span class="foreign">online</span> é explorar a
+					diferença entre <span class="inline-eq"><img src="images/img01.png" alt="Derivada parcial de f com relação a x"/></span> (derivada parcial) e <span class="inline-eq"><img src="images/img28.png" alt="Derivada total de f com relação a x"/></span> (derivada total).
+				</p>
+				
+				<p>
+					Na figura há quatro pontos: A, B, C e D. O ponto A pode ser arrastado livremente (use o <span class="foreign">mouse</span>), enquanto os pontos B e D só podem ser arrastados 
+					na horizontal e vertical, respectivamente. E o ponto C permanece sempre sobre a reta azul, cuja inclinação é dada por <span class="inline-eq"><img src="images/img29.png" alt="Delta y sobre delta x"/></span>.
+					Experimente arrastá-los para entender melhor estas relações, e observe que ao passar o <i>mouse</i> sobre um ponto, suas coordenadas são exibidas, bem como o 
+					valor de <img src="images/img32.png" alt="f"/> nele. O mesmo para <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> e <span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>.
+				</p>
+				
+				<p>
+					Mas <em>atenção:</em> não confunda o retângulo de lados x e y, objeto do nosso estudo, com aquele de lados <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> e 
+					<span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>, que aparece na figura.
+				</p>
+			</div>
+				
+			<div id="frame-2" class="frame start-invisible">	
+				<p>
+					O ponto A foi automaticamente posicionado em (3, 4/3), o que representa um retângulo de lados 3 m e 4/3 m. Sua área é, portanto, 4 m<sup>2</sup>. 
+					Pergunta: se aumentarmos o lado x do retângulo em meio metro, qual será o valor da área? Represente esta nova situação através do ponto B, 
+					arrastando-o para a direita de A de tal modo que <span class="inline-eq"><img src="images/img33.png" alt="Delta x = 1 / 2"/></span> (não precisa ser exato). E verifique o valor de 
+					<span class="inline-eq"><img src="images/img34.png" alt="Função f no ponto B"/></span>, passando o <span class="foreign">mouse</span>	por cima de B.
+				</p>
+			</div>
+				
+			<div id="frame-3" class="frame start-invisible">
+				<p>
+					Qual é a <em>variação da área</em> (<span class="inline-eq"><img src="images/img35.png" alt="Variação média de f entre os pontos A e B"/></span>) associada a esta variação do lado (<span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span>)?
+				</p>
+				<div class="display-eq">
+					<img src="images/img02.png" alt="Variação da f entre os pontos A e B"/>
+					<input id="input-0" name="01" size="10"/> <span>m<sup>2</sup></span>
+				</div>
+			</div>
+			
+			<div id="frame-4" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-0" class="wrong-answer start-invisible">A resposta correta é <span id="answer-0">??</span>.</span>
+					<span id="right-answer-0" class="right-answer start-invisible">Correto.</span> 
+					E qual é a <em>taxa de variação média</em>?
+				</p>
+			
+				<div class="display-eq">
+					<img src="images/img03.png" alt="Taxa de variação média de f ao longo de x"/><input id="input-1" name="02" size="10"/> m<sup>2</sup>/m
+				</div>
+			</div>
+			
+			<div id="frame-5" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-1" class="wrong-answer start-invisible">A resposta correta é <span id="answer-1a">??</span>.</span>
+					<span id="right-answer-1" class="right-answer start-invisible">Correto.</span>
+					Este resultado significa que, <em>em média</em>, a área do retângulo varia <span id="answer-1b">??</span> m<sup>2</sup> para cada metro que
+					acrescemos em x. Para entender isto, esqueça por um instante o <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> que você usou há pouco e considere o seguinte problema:
+				</p>	
+				
+				<p class="quotation">A taxa de variação média de <img src="images/img32.png" alt="f"/> ao longo do eixo x é <span id="answer-1c">??</span> m<sup>2</sup>/m. 
+					Qual é a variação em f quando x varia de 1/4 m?
+				</p>
+				
+				<p>
+					Para responder esta pergunta você deve simplesmente multiplicar a taxa de variação de <img src="images/img32.png" alt="f"/>  (vamos chamá-la de <span class="inline-eq"><img src="images/img40.png" alt="Delta f"/></span>, 
+					apenas para não confundir com <span class="inline-eq"><img src="images/img35.png" alt="Variação média de f entre os pontos A e B"/></span>) pela variação de <span class="inline-eq">x (<img src="images/img39.png" alt="Delta x"/>)</span>:
+				</p>
+				
+				<div class="display-eq"><img src="images/img04.png" alt="Diferencial de f"/></div>
+				
+				<p>
+					o que resulta <span id="answer-1d">??</span> m<sup>2</sup>/m. Verifique isto: arraste o ponto B para perto de A até que <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/> = 1/4</span>, calcule a variação de <img src="images/img32.png" alt="f"/> e compare os resultados.
+				</p>
+				
+				<p>
+					Em geral, a expressão acima funciona quando <span class="inline-eq"><img src="images/img39.png" alt="Delta x"/></span> é pequeno, o que acarreta um <span class="inline-eq"><img src="images/img40.png" alt="Delta f"/></span> pequeno. 
+					Neste caso, chamamos esses símbolos de <em>diferenciais</em>, pois eles representam uma pequena diferença. Mas à medida que aumentamos <span class="inline-eq"><img src="images/img39.png" alt="Delta x"/></span>, <span class="inline-eq"><img src="images/img40.png" alt="Delta f"/></span> 
+					torna-se mais e mais incorreto. Verifique se isto ocorre no caso acima, refazendo a conta acima para outros <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span>, e procure compreender o porquê.
+				</p>
+			</div>
+				
+			<div id="frame-6" class="frame start-invisible">
+				<p>
+					Para continuarmos, o ponto B foi posicionado de modo que <span class="inline-eq"><img src="images/img41.png" alt="Delta x aproximadamente igual a 1 / 2"/></span>. E vamos deixar as unidades de lado.
+				</p>
+				
+				<p>
+					Agora vejamos: será que se aumentarmos o lado y em meio metro obteremos os mesmos resultados?
+					Esta situação é representada pelo ponto D. Arraste-o até que <span class="inline-eq"><img src="images/img31.png" alt="Delta y"/> = 1/2</span> e calcule:
+				</p>
+			</div>
+			
+			<div id="frame-7" class="frame start-invisible">
+				<p>
+					<span class="display-eq">
+						<img src="images/img05.png" alt="Variação da f entre os pontos A e B"/> <input id="input-2" name="03" size="10"/>
+					</span>
+					<span class="eq-number"><a name="eq-1">(1)</a></span>
+					
+					<br/>
+					
+					<span class="display-eq">
+						<img src="images/img06.png"  alt="Taxa de variação média de f ao longo de y"/>
+						<input id="input-3" name="03" size="10"/>
+					</span>
+				</p>
+			</div>
+			
+			<div id="frame-8" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-2" class="wrong-answer start-invisible">A resposta correta é <span id="answer-2">??</span> e <span id="answer-3">??</span>, respectivamente.</span>
+					<span id="right-answer-2" class="right-answer start-invisible">Correto.</span>
+					Ou seja, um acréscimo de igual medida no lado y acarreta uma variação maior da área do retângulo do que aquela obtida quando aumentamos x. 
+					Isto significa que a taxa de variação média da área é maior na direção do eixo y do que na do eixo x.
+				</p>
+			</div>
+			
+			<div id="frame-9" class="frame start-invisible">
+				<p>
+					Mas cuidado, pois isto depende da configuração com que estamos trabalhando: o ponto A. Veja agora: o ponto A foi posicionado em (4/3, 3). 
+					Refaça a análise acima nesta situação e identifique em que direção a área varia mais rapidamente: em x ou em y?
+				</p>
+			</div>
+			
+			<div id="frame-10" class="frame start-invisible">
+				<p>
+					Então, <span class="inline-eq"><img src="images/img42.png" alt="Função f de x e y"/></span> varia diferentemente ao longo de x e y. Dito de outra forma, a taxa de variação média de <img src="images/img32.png" alt="f"/>  ao longo de x 
+					não é necessariamente igual àquela ao longo de y. E como você deve ter imaginado, podemos determinar a taxa de variação <em>pontual</em> de <img src="images/img32.png" alt="f"/>  ao longo de x 
+					fazendo <span class="inline-eq"><img src="images/img43.png" alt="Delta x tende a zero"/></span>. A este resultado chamamos <em>derivada parcial de</em> <img src="images/img32.png" alt="f"/>  <em>com relação a</em> x, e a representamos por 
+					<span class="inline-eq"><img src="images/img01.png" alt="Derivada parcial de f com relação a x"/></span>.</p>
+				
+				<p>
+					Faça isto empiricamente: arraste o ponto B para bem perto de A (utilize a ferramenta de zoom) e calcule:
+				</p>
+				
+				<div class="display-eq">
+					<img src="images/img07.png" alt="Derivada parcial de f com relação a x no ponto A"/>
+					<input id="input-4" name="04" size="10"/>
+				</div>
+				<div class="eq-number"><a name="eq-2">(2)</a></div>
+					
+				<p>
+					Nesta equação, <span class="inline-eq"><img src="images/img08.png" alt="Derivada parcial de f com relação a x no ponto A"/></span> é a derivada parcial de <img src="images/img32.png" alt="f"/>  com relação a x calculada no ponto A.
+				</p>
+			</div>
+			
+			<div id="frame-11" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-4" class="wrong-answer start-invisible">A resposta correta é 4/3.</span>
+					<span id="right-answer-4" class="right-answer start-invisible">Correto.</span>
+					Mas como sabemos que <img src="images/img27.png" alt="Função de x e y"/> , podemos também calcular <span class="inline-eq"><img src="images/img01.png" alt="Derivada parcial de f com relação a x"/></span> através do cálculo diferencial: como mantivemos y constante 
+					(o ponto B só pode ser movido na horizontal), então qualquer ocorrência de y na expressão de <img src="images/img32.png" alt="f"/>  comporta-se como uma constante. E deste modo,
+				</p>
+				
+				<div class="display-eq"><img src="images/img09.png" alt="Derivada parcial de f com relação a x"/></div>
+				
+				<p>
+					Em A = (3, 4/3), a derivada parcial de <img src="images/img32.png" alt="f"/>  com relação a x é simplesmente 4/3. Compare com o resultado obtido em <a href="#eq-2">(2)</a>.
+				</p>
+			</div>
+			
+			<div id="frame-12" class="frame start-invisible">
+				<p>
+					Refaça a análise acima ao longo de y: arraste o ponto D para perto de A e determine <span class="inline-eq"><img src="images/img10.png" alt="Derivada parcial de f com relação a y"/></span> empiricamente. 
+					Depois, calcule a derivada parcial de <img src="images/img32.png" alt="f"/>  com relação a y em A e compare os resultados.
+				</p>
+			</div>
+				
+			<div id="frame-13" class="frame start-invisible">
+				<p>
+					Mas, e se modificarmos tanto x quanto y? Esta situação é representada pelo ponto C. Determine:
+				</p>
+				
+				<div class="display-eq">
+					<img src="images/img11.png" alt="Variação de f entre os pontos A e C"/>
+					<input id="input-5" name="05" size="10"/>
+				</div>
+				<div class="eq-number"><a name="eq-3">(3)</a></div>
+			</div>
+			
+			<div id="frame-14" class="frame start-invisible">
+			
+				<p>
+					<span id="wrong-answer-5" class="wrong-answer start-invisible">A resposta correta é <span id="answer-5">??</span>.</span>
+					<span id="right-answer-5" class="right-answer start-invisible">Correto.</span>
+					E qual seria a taxa de variação (média ou pontual)? Temos de dividir por <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> ou por <span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>? 
+					Na verdade podemos fazer ambos: se dividirmos por <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> obteremos, no limite em que <span class="inline-eq"><img src="images/img43.png" alt="Delta x tende a zero"/></span>, a
+					derivada total de <img src="images/img32.png" alt="f"/>  com relação a x, representada por <span class="inline-eq"><img src="images/img28.png" alt="Derivada total de f com relação a x"/></span>:
+				</p>
+			  
+				<div class="display-eq">
+					<img src="images/img12.png" alt="Derivada total de f com relação a x"/>
+					<input id="input-6" name="06" size="10"/>
+				</div>
+				<div class="eq-number"><a name="eq-4">(4)</a></div>
+			</div>
+			
+			<div id="frame-15" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-6" class="wrong-answer start-invisible">A resposta correta é <span id="answer-6">??</span> (a variação em x tende a zero?).</span>
+					<span id="right-answer-6" class="right-answer start-invisible">Correto.</span>
+				</p>
+			
+				<p>
+					Analogamente, podemos calcular o limite de <span class="inline-eq"><img src="images/img44.png" alt="Taxa de variação média de f ao longo de y"/></span>:
+				</p>
+			
+				<div class="display-eq"><img src="images/img13.png" alt="Derivada total de f com relação a y"/> <input id="input-7" name="07" size="10"/></div>
+			</div>
+			
+			<div id="frame-16" class="frame start-invisible">
+				<p>
+					<span id="wrong-answer-7" class="wrong-answer start-invisible">A resposta correta é <span id="answer-7">??</span> (a variação em y tende a zero?).</span>
+					<span id="right-answer-7" class="right-answer start-invisible">Correto.</span>
+				</p>
+			
+				<p>
+					Há ainda uma terceira opção: podemos dividir por <span class="inline-eq"><img src="images/img14.png" alt="Delta s"/></span>, a distância entre os pontos A e C. 
+					Neste caso obteremos, no limite em que <span class="inline-eq"><img src="images/img52.png" alt="Delta s tende a zero"/></span>, a <em>derivada direcional</em> de <img src="images/img32.png" alt="f"/> , representada por <span class="inline-eq"><img src="images/img15.png" alt="Derivada direcional de f"/></span>, 
+					onde <em>u</em> é o versor (vetor de comprimento unitário) paralelo à reta azul (veja-o na figura). Mas nós não entraremos em detalhes sobre esta forma.
+				</p>
+			
+				<p>
+					Muita atenção agora: <span class="inline-eq"><img src="images/img01.png" alt="Derivada parcial de f com relação a x"/></span> é a derivada de <img src="images/img32.png" alt="f"/>  com relação a x, quando y é <em>independente</em> de x (e, por isso, 
+					podemos mantê-lo constante ao variar x). Por outro lado, <span class="inline-eq"><img src="images/img28.png" alt="Derivada total de f com relação a x"/></span> é a derivada de <img src="images/img32.png" alt="f"/>  com relação a x quando y é <em>dependente</em> de x 
+					(e, por isso, <em>não</em> podemos mantê-lo constante ao variar x).
+				</p>
+			
+				<p>
+					O ponto C representa esta dependência: você pode arrastá-lo, mas ele sempre permanecerá sobre a reta azul. Ou seja, se você o arrastar 
+					na horizontal (<span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span>), inevitavelmente observará também um movimento vertical (<span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>). 
+					Esta relação entre x e y por ser descrita pela equação da reta: <span class="inline-eq"><img src="images/img45.png" alt="Equação da reta"/></span>, onde m é a inclinação da reta, 
+					dada por <span class="inline-eq"><img src="images/img29.png" alt="Delta y sobre delta x"/></span>, o que equivale à derivada de y com relação a x no ponto A quando <span class="inline-eq"><img src="images/img43.png" alt="Delta x tende a zero"/>: dy/dx</span>.
+				</p>
+			
+				<p>
+					É claro que na prática utilizamos o cálculo diferencial para obter a derivada total:
+				</p>
+			
+				<p class="display-eq"><img src="images/img16.png" alt="Derivada total de f com relação a x"/></p>
+			
+				<p>
+					Faça a conta para <span class="inline-eq"><img src="images/img46.png" alt="(x, y) = (xA, yA)"/></span> e compare com o resultado obtido em <a href="#eq-4">(4)</a>. 
+				</p>
+			
+				<div id="extra1" class="extra">
+					<div class="head">Saiba mais</div>
+					<div id="extra1_content" class="content">
+						<p>
+							Para entender a expressão de <span class="inline-eq"><img src="images/img28.png" alt="Derivada total de f com relação a x"/></span> acima, perceba que <span class="inline-eq"><img src="images/img47.png" alt="Variação de f entre os pontos A e C"/></span> (atenção para os subscritos).
+							Como vimos, podemos aproximar <span class="inline-eq"><img src="images/img35.png" alt="Variação média de f entre os pontos A e B"/></span> por
+						</p>
+						<div class="inline-eq"><img src="images/img17.png" alt="Variação de f entre os pontos A e B"/></div>
+						<p>
+							Expressão análoga pode ser obtida para <span class="inline-eq"><img src="images/img48.png" alt="Variação de f entre os pontos B e C"/></span>, com a derivada agora calculada em B. Assim,
+						</p>
+						<div class="inline-eq"><img src="images/img18.png" alt="Variação de f entre os pontos A e C"/></div>
+						<p>
+							Dividindo por <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span>,
+						</p>
+						<div class="inline-eq"><img src="images/img19.png" alt="Taxa de variação média entre os pontos A e C"/></div>
+						<p>
+							e fazendo <span class="inline-eq"><img src="images/img43.png" alt="Delta x tende a zero"/></span>, obtemos:
+						</p>
+						<div class="inline-eq"><img src="images/img20.png" alt="Derivada total de f com relação a x no ponto A"/></div>
+						<p>
+							Note que troquei <span class="inline-eq"><img src="images/img25.png" alt="Derivada parcial de f com relação a y no ponto B"/></span> por <span class="inline-eq"><img src="images/img26.png" alt="Derivada parcial de f com relação a y no ponto B"/></span>, pois quando <span class="inline-eq"><img src="images/img43.png" alt="Delta x tende a zero"/></span>, o ponto B tende ao ponto A.
+							E como A representa qualquer ponto no domínio de <span class="inline-eq"><img src="images/img32.png" alt="f"/></span>, podemos removê-lo da expressão acima, o que resulta na equação 8. 
+							Note também que a segunda parcela acima é simplesmente a regra da cadeia para <span class="inline-eq"><img src="images/img49.png" alt="f(x, y(x))"/></span>, com y sendo uma função de x. 
+							Experimente fazer este desenvolvimento para <span class="inline-eq"><img src="images/img50.png" alt="df / dy"/></span>.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="frame-17" class="frame start-invisible">
+			
+				<p>
+					A derivada total de <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> com relação a y é similar [agora consideramos que x depende de y, ou seja, <span class="inline-eq"><img src="images/img21.png" alt="x é uma função de y"/></span>]:
+				</p>
+				
+				<div class="display-eq"><img src="images/img22.png" alt="Derivada total de f com relação a y"/></div>
+				
+				<p>
+					onde usamos <span class="inline-eq"><img src="images/img23.png" alt="Derivada de x com relação a y"/></span>. Faça suas contas e compare com o resultado empírico.
+					Depois, discuta com seus colegas e tutores: se a relação entre x e y fosse não uma reta, mas <span class="inline-eq">y = x<sup>2</sup></span>, 
+					quais seriam <span class="inline-eq"><img src="images/img28.png" alt="Derivada total de f com relação a x"/></span> e <span class="inline-eq"><img src="images/img50.png" alt="df / dy"/></span>?
+				</p>
+				
+				<div id="extra2" class="extra">
+					<div class="head">Saiba mais</div>
+					<div id="extra2_content" class="content">
+						<p>
+							Caso você tenha ficado curioso(a) quanto a derivada direcional, para <span class="inline-eq"><img src="images/img27.png" alt="Função de x e y"/></span>
+						</p>
+						<div class="inline-eq"><img src="images/img24.png" alt="Derivada direcional de f"/></div>
+						<p>
+							Arraste C para perto de A e determine a derivada direcional empiricamente, e use a expressão acima para comparar os resultados.
+						</p>
+					</div>
+				</div>
+			</div>
+				
+			<div id="frame-18" class="frame start-invisible">
+				<p>
+					Para finalizar esta atividade <span class="foreign">online</span>, perceba que a variação de <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> entre A e C (equação <a href="#eq-3">3</a>) é ainda maior
+					que aquela entre A e D <a href="#eq-1">(1)</a>. Ou seja, dependendo da direção em que andamos (no plano xy), <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> varia mais ou menos.
+				</p>
+			
+				<p>
+					Faça o seguinte: posicione A sobre uma curva de nível e, variando <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> e <span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span> para alterar a inclinação 
+					da reta azul, determine a direção em que <span class="inline-eq"><img src="images/img51.png" alt="Variação de f entre os pontos A e C"/></span> é máxima. Uma dica é pensar na distância necessária 
+					para alcançar a próxima curva de nível. A ideia é fixar <span class="inline-eq"><img src="images/img51.png" alt="Variação de f entre os pontos A e C"/></span> (a variação de <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> entre uma curva de nível 
+					e outra) e descobrir para qual direção é preciso andar menos para atingir esta variação em <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> (imagine o 
+					gráfico de <span class="inline-eq"><img src="images/img32.png" alt="f"/></span> como sendo um morro no qual você quer subir). Em x (deslocamento <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span>), em y (<span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>) ou em 
+					uma combinação de ambos (<span class="inline-eq"><img src="images/img14.png" alt="Delta s"/></span>)?
+				</p>
+			
+				<p>
+					Ao determinar a direção, pressione o botão “adicionar indicador de direção”, à esquerda do plano cartesiano. O <span class="foreign">software</span> colocará uma indicação 
+					dela em A. Depois, refaça este processo para outros cinco pontos, preferencialmente sobre as curvas de 
+					nível exibidas. Qual é a relação entre essas direções e as curvas de nível? Discuta suas conclusões e 
+					dificuldades com seus colegas e tutores.
+				</p>
+			
+				<p>
+					<em>obs.:</em> você pode apagar os marcadores de direção. Basta arrastar o <span class="foreign">mouse</span> em volta deles e pressionar o botão “remover indicador de direção”.
+				</p>
+			</div>
+		</div>
+		
+		<div class="line-break"></div>
+		
+		<div id="step-forward" class="start-invisible">Avançar</div>
+		<div id="reset" class="start-invisible">Recomeçar</div>
+      
+		<div id="reset-dialog" class="dialog" title="Confirmação">
+			Você tem certeza de que quer recomeçar esta atividade?
+		</div>
+		
+		<div id="finish-dialog" class="dialog" title="Fim da atividade">
+			Você concluiu esta atividade <span class="foreign">online</span> e acertou <span id="score">0</span> de 8 perguntas.
+			Utilize o botão "recomeçar" para refazer estes passos, ou faça outros experimentos na figura, escolhendo outros valores de A, <span class="inline-eq"><img src="images/img30.png" alt="Delta x"/></span> e <span class="inline-eq"><img src="images/img31.png" alt="Delta y"/></span>.
+			Utilize o fórum para propor experimentos, trocar ideias, dúvidas e dificuldades com seus colegas e tutores.
+		</div>
+    
+		<p class="license">
+			Este material foi criado pelo Centro de Ensino e Pesquisa Aplicada (<a href="http://cepa.if.usp.br/" onclick="window.open(this.href);return false;">CEPA</a>) do Departamento de Física Experimental do Instituto de Física da Universidade de São Paulo, campus capital, e é distribuido conforme a licença Creative Commons Atribuição - Uso não-comercial - Compartilhamento pela mesma licença 3.0 Brasil (CC BY-NC-SA 3.0). 
+			Isto significa que você pode compartilhar ou remixar esta obra, segundo esta mesma licença, desde que cite o autor original (CEPA) e sua página web (cepa.if.usp.br). Você NÃO pode usar esta obra, nem variações dela, para fins comerciais (para este propósito, entre em contato com o CEPA).
+		</p>
+	</body>
+</html>
