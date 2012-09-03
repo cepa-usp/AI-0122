@@ -1,0 +1,37 @@
+.slide {
+  background-color: #FFFFCC;
+  border: 1px solid #999999;
+  height: 480px;
+  margin: 1em 0;
+  overflow: hidden;
+  position: fixed;
+  width: 550px;
+  top: 0;
+  right: 0;
+}
+
+.slide .inner {
+  background-color: #44CC55;
+  color: #333333;
+  height: 480px;
+  position: absolute;
+  width: 640px;
+  float: right;
+  margin-left: 20px;
+}
+
+.slide .fechada{
+  height: 480px;
+  width: 20px;
+  float: left;
+  background: url("../images/bar-right-green.png") top left;
+  cursor: pointer;
+}
+
+.slide .aberta{
+  height: 480px;
+  width: 20px;
+  float: left;
+  background: url("../images/bar-left-green.png") top left;
+  cursor: pointer;
+}
